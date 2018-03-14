@@ -4,7 +4,7 @@
 
 **on terminal:**
 
-_$ conda create --name venvname
+*$ conda create --name venvname
 
 $ source activate venvname
 
@@ -12,7 +12,7 @@ $ django-admin startproject projectname
 
 $ cd projectname
 
-$ python manage.py startapp AppName_
+$ python manage.py startapp AppName*
 
  **in AppName/Views.py file add:**
 
@@ -66,9 +66,9 @@ urlpatterns = [
 
 **Now go to projectname/projectname and a new folder**
 **name this folder "templates"**
--
+
 **inside of the new folder "templates" add another folder with the same name as your app "AppName"**
--
+
 **inside of projectname/projectname/templates create a file "index.html" **
 
 **in the index.html add:**
