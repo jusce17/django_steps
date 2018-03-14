@@ -31,3 +31,17 @@ $ python manage.py startapp AppName
 ```
 
 **add a new file at "AppName/" and call it urls.py**
+
+**in this new file (urls.py) write:**
+
+```
+from django.urls import  path
+from firstApp import views
+
+urlpatterns = [
+
+        path(r'^$', views.index, name = 'index'),
+]
+
+
+```
