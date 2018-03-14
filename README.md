@@ -2,7 +2,7 @@
 
 **With Anaconda already install follow these steps:**
 
-_on terminal_
+**on terminal:**
 
 $ conda create --name venvname
 
@@ -14,7 +14,7 @@ $ cd projectname
 
 $ python manage.py startapp AppName
 
- _in Views.py file add:_
+ **in AppName/Views.py file add:**
 
 
  ```python
@@ -29,3 +29,5 @@ $ python manage.py startapp AppName
      return render (request, 'index.html', context= my_dict)
 
 ```
+
+**add a new file at "AppName/" and call it urls.py**
