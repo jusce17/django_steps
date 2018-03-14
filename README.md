@@ -34,7 +34,8 @@ $ python manage.py startapp AppName
 
 **in this new file (urls.py) write:**
 
-```
+```python
+
 from django.urls import  path
 from firstApp import views
 
@@ -43,5 +44,22 @@ urlpatterns = [
         path(r'^$', views.index, name = 'index'),
 ]
 
+
+```
+**go to projectname/urls.py and add:**
+
+```python
+
+from django.contrib import admin
+from django.urls import path, include, re_path
+from firstApp import views
+
+
+urlpatterns = [
+    re_path('admin/', admin.site.urls),
+    re_path(r'^$', views.index, name='index'),
+    re_path(r'^firstApp/', include("firstApp.urls"))
+
+]
 
 ```
