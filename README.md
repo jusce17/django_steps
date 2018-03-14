@@ -93,3 +93,15 @@ urlpatterns = [
 **now go to *projectname/projectname/settings.py* to let our project know how we want him to work**
 
 add the following code to **settings.py**
+
+After
+```python
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+```
+
+add:
+
+```python
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+```
