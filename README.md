@@ -4,7 +4,7 @@
 
 **on terminal:**
 
-$ conda create --name venvname
+_$ conda create --name venvname
 
 $ source activate venvname
 
@@ -12,7 +12,7 @@ $ django-admin startproject projectname
 
 $ cd projectname
 
-$ python manage.py startapp AppName
+$ python manage.py startapp AppName_
 
  **in AppName/Views.py file add:**
 
@@ -37,7 +37,7 @@ $ python manage.py startapp AppName
 ```python
 
 from django.urls import  path
-from firstApp import views
+from AppName import views
 
 urlpatterns = [
 
@@ -52,14 +52,40 @@ urlpatterns = [
 
 from django.contrib import admin
 from django.urls import path, include, re_path
-from firstApp import views
+from AppName import views
 
 
 urlpatterns = [
     re_path('admin/', admin.site.urls),
     re_path(r'^$', views.index, name='index'),
-    re_path(r'^firstApp/', include("firstApp.urls"))
+    re_path(r'^AppName/', include("AppName.urls"))
 
 ]
+
+```
+
+**Now go to projectname/projectname and a new folder**
+**name this folder "templates"**
+-
+**inside of the new folder "templates" add another folder with the same name as your app "AppName"**
+-
+**inside of projectname/projectname/templates create a file "index.html" **
+
+**in the index.html add:**
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HEllo</title>
+  </head>
+  <body>
+
+    <h1>Hello this is a test page!</h1>
+    <h2>{{ insert_content}}</h2>
+
+  </body>
+</html>
 
 ```
