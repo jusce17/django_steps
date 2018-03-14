@@ -4,15 +4,15 @@
 
 **on terminal:**
 
-*$ conda create --name venvname*
+>*$ conda create --name venvname*
 
-*$ source activate venvname*
+>*$ source activate venvname*
 
-*$ django-admin startproject projectname*
+>*$ django-admin startproject projectname*
 
-*$ cd projectname*
+>*$ cd projectname*
 
-*$ python manage.py startapp AppName*
+>*$ python manage.py startapp AppName*
 
  **in AppName/Views.py file add:**
 
