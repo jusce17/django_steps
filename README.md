@@ -89,5 +89,7 @@ urlpatterns = [
 </html>
 
 ```
-**now go to projectname/projectname/settings.py to let our project know how we want him to work**
+
+**now go to *projectname/projectname/settings.py* to let our project know how we want him to work**
+
 add the following code to **settings.py**
