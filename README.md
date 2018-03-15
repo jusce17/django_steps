@@ -1,5 +1,7 @@
 # django_steps
 
+baby steps to launch a webapp made in Django 2.0
+
 **With Anaconda already install follow these steps:**
 
 **on terminal:**
