@@ -64,8 +64,8 @@ urlpatterns = [
 
 ```
 
-**Now go to projectname/projectname and add two new folders**
-**name this folder "templates" and "statics"**
+**Now go to projectname/projectname and add two (3) new folders**
+**name this folder "templates" and "statics/images"**
 
 **inside of the new folder "templates" add another folder with the same name as your app "AppName"**
 
@@ -119,5 +119,27 @@ Add:
 ```python
 
 'DIRS': [TEMPLATE_DIR,],
+
+```
+
+Add this to the end of the file
+```python
+STATICFILES_DIRS = [
+    STATIC_DIR,
+
+]
+
+```
+
+
+
+In order to load the static files, edit the index.html file
+
+```html
+<!DOCTYPE html>
+ {% load staticfiles %}
+
+<!— to load images —>
+<img src="{%static "images/image1.png" %}" alt="image not loaded" width="200" height="200"/>
 
 ```
