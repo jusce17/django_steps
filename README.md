@@ -64,8 +64,8 @@ urlpatterns = [
 
 ```
 
-**Now go to projectname/projectname and a new folder**
-**name this folder "templates"**
+**Now go to projectname/projectname and add two new folders**
+**name this folder "templates" and "statics"**
 
 **inside of the new folder "templates" add another folder with the same name as your app "AppName"**
 
@@ -104,4 +104,20 @@ add:
 
 ```python
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+```
+
+After
+```python
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',        
+
+```
+
+Add:
+```python
+
+'DIRS': [TEMPLATE_DIR,],
+
 ```
