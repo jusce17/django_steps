@@ -108,7 +108,7 @@ add:
 
 ```python
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_DIR = os.path.join(BASE_DIR, 'statics')
 ```
 
 After
