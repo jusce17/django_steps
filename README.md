@@ -124,7 +124,7 @@ Add:
 
 'DIRS': [TEMPLATE_DIR,],
 
-```
+``` 
 
 Add this to the end of the file
 ```python
