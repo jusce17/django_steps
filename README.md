@@ -123,8 +123,30 @@ Add:
 
 ```python
 
-'DIRS': [TEMPLATE_DIR,],
+  'DIRS': [TEMPLATE_DIR,],
 
 ``` 
 
-a
+Add this to the end of the file
+
+
+```python
+STATICFILES_DIRS = [
+    STATIC_DIR,
+
+]
+
+```
+
+
+
+In order to load the static files, edit the index.html file
+
+```html
+<!DOCTYPE html>
+ {% load staticfiles %}
+
+<!— to load images —>
+<img src="{%static "images/image1.png" %}" alt="image not loaded" width="200" height="200"/>
+
+```
