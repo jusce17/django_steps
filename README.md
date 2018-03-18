@@ -120,6 +120,7 @@ TEMPLATES = [
 ```
 
 Add:
+
 ```python
 
 'DIRS': [TEMPLATE_DIR,],
@@ -127,6 +128,7 @@ Add:
 ``` 
 
 Add this to the end of the file
+
 ```python
 STATICFILES_DIRS = [
     STATIC_DIR,
