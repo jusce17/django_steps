@@ -124,10 +124,10 @@ Add:
 ```python
 
 'DIRS': [TEMPLATE_DIR,],
-
 ``` 
 
 Add this to the end of the file
+
 
 ```python
 STATICFILES_DIRS = [
