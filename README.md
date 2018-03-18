@@ -146,8 +146,17 @@ In order to load the static files, edit the index.html file
 ```html
 <!DOCTYPE html>
  {% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
 
-<!— to load images —>
-<img src="{%static "images/image1.png" %}" alt="image not loaded" width="200" height="200"/>
+    <h2>{{ insert_content }}</h2>
+    <img src="{%static "images/1.jpg" %}" alt="image not loaded" width="200" height="200"/>
+
+  </body>
+</html>
 
 ```
