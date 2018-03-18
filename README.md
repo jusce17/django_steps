@@ -6,19 +6,19 @@ baby steps to launch a webapp made in Django 2.0
 
 **on terminal:**
 ```sh
-$ conda create --name venvname*
+$ conda create --name venvname
 
-$ source activate venvname*
+$ source activate venvname
 
-$ django-admin startproject projectname*
+$ django-admin startproject projectDjango
 
-$ cd projectname*
+$ cd projectDjango
 
-$ python manage.py startapp AppName*
+$ python manage.py startapp firstApp
 
 ```
 
- **in AppName/Views.py file add:**
+ **in firstApp/Views.py file add:**
 
 
  ```python
@@ -30,50 +30,50 @@ $ python manage.py startapp AppName*
 
  def index(request):
      my_dict = {'insert_content': "Hello! I'm from first app"}
-     return render (request, 'index.html', context= my_dict)
+     return render (request, 'firstApp/index.html', context= my_dict)
 
 ```
 
-**add a new file at "AppName/" and call it urls.py**
+**add a new file at "firstApp/" and call it urls.py**
 
 **in this new file (urls.py) write:**
 
 ```python
 
-from django.urls import  path
-from AppName import views
+from django.urls import  re_path
+from firstApp import views
 
 urlpatterns = [
 
-        path(r'^$', views.index, name = 'index'),
+        re_path(r'^$', views.index, name = 'index'),
 ]
 
 
 ```
-**go to projectname/urls.py and add:**
+**go to projectDjango/urls.py and add:**
 
 ```python
 
 from django.contrib import admin
-from django.urls import path, include, re_path
-from AppName import views
+from django.urls import  include, re_path
+from firstApp import views
 
 
 urlpatterns = [
     re_path('admin/', admin.site.urls),
     re_path(r'^$', views.index, name='index'),
-    re_path(r'^AppName/', include("AppName.urls"))
+    re_path(r'^firstApp/', include("firstApp.urls"))
 
 ]
 
 ```
 
-**Now go to projectname/projectname and add two (3) new folders**
-**name this folder "templates" and "statics/images"**
+**In the same directory as projectDjango and firstApp add 2 new folders**
+**name the folders "templates" and "statics"**
 
-**inside of the new folder "templates" add another folder with the same name as your app "AppName"**
+**inside of the new folder "templates" add another folder with the same name as your app "firstApp"**
 
-**inside of projectname/projectname/templates create a file "index.html"**
+**inside of templates create a file "index.html"**
 
 **in the index.html add:**
 
@@ -94,7 +94,7 @@ urlpatterns = [
 
 ```
 
-**now go to *projectname/projectname/settings.py* to let our project know how we want him to work**
+**now go to *projectDjango/projectDjango/settings.py* to let our project know how we want him to work**
 
 add the following code to **settings.py**
 
